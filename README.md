@@ -1,2 +1,1 @@
-# otus-css-zotin
-otus-css
+# Учебный курс OTUS HTML\CSS
