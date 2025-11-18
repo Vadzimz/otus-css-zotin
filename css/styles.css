@@ -1,0 +1,108 @@
+@import "fonts.css";
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-family: "Playfair Display";
+  font-size: 86px;
+  font-weight: 500;
+}
+
+header h1 {
+  font-weight: 600;
+}
+
+nav {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.company-name-with-background hgroup p {
+  font-size: 24px;
+}
+
+.chapter {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.biography hgroup p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+blockquote {
+  font-family: "Bitter";
+  font-weight: 400;
+}
+
+#quote-1 {
+  font-size: 26px;
+}
+
+#quote-2 {
+  font-size: 32px;
+}
+
+figcaption h4, dt {
+  font-weight: 700;
+}
+
+.strong-points ul {
+  font-family: "Bitter";
+  font-size: 34px;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer p strong {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* 
+header**********
+Mod Play semibold 86px
+nav Rob medium 24px
+
+section 1*********
+play medium 86
+roboto medium 20
+
+section bio************
+Biography Roboto bold 24 (other menus are the same)
+Katya Play med 86
+art dir roboto med 20
+cite bitter reg 26
+
+section designers***********
+under figure roboto bold / regular 16
+
+section testimonials**********
+links roboto bold / regular 16
+cite bitter reg 32
+
+section strong points**********
+Strengths Play med 86
+list Bitter reg 34
+
+footer*************
+adress rob reg 16
+
+a product of rob reg 16 MOD rob black 24
+
+small rob reg 16
+
+*/
