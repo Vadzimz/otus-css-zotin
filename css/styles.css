@@ -12,20 +12,20 @@ h1, h2 {
   font-weight: 500;
 }
 
-header h1 {
+.header h1 {
   font-weight: 600;
 }
 
-nav {
+.nav-list {
   font-size: 24px;
   font-weight: 500;
 }
 
-nav ul {
+.nav-list ul, .useful-links ul {
   list-style-type: none;
 }
 
-.company-name-with-background hgroup p {
+.company-name-and-short-description p {
   font-size: 24px;
 }
 
@@ -34,7 +34,11 @@ nav ul {
   font-weight: 700;
 }
 
-.biography hgroup p {
+.rotated {
+  transform: rotate(-90deg);
+}
+
+.main-person-position-and-skills p {
   font-size: 20px;
   font-weight: 500;
 }
@@ -44,30 +48,30 @@ blockquote {
   font-weight: 400;
 }
 
-#quote-1 {
+.quote-1 {
   font-size: 26px;
 }
 
-#quote-2 {
+.quote-2 {
   font-size: 32px;
 }
 
-figcaption h4, dt {
+.designer-name, .from-and-skills dt {
   font-weight: 700;
 }
 
-.strong-points ul {
+.strong-points-list {
   font-family: "Bitter";
   font-size: 34px;
   font-weight: 400;
   list-style-type: none;
 }
 
-footer address {
+.phone-and-mail {
   font-style: normal;
 }
 
-footer p strong {
+.product-of strong {
   font-size: 24px;
   font-weight: 900;
 }
