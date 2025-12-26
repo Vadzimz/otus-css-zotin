@@ -1,9 +1,27 @@
 @import "fonts.css";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  all:unset;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+.content {
+  padding: 0 calc(50% - 1400px / 2);
 }
 
 h1, h2 {
@@ -12,35 +30,119 @@ h1, h2 {
   font-weight: 500;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 135px;
+}
+
 .header h1 {
   font-weight: 600;
+}
+
+.header-spacer {
+  margin-right: auto; 
 }
 
 .nav-list {
   font-size: 24px;
   font-weight: 500;
-}
-
-.nav-list ul, .useful-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 55px;
   list-style-type: none;
 }
 
-.company-name-and-short-description p {
-  font-size: 24px;
+.btn {
+  width: 31px;
+  height: 30px;
+  border: none;
+  background-image: url("../img/icons/more-options.svg");
+  background-color: white;
 }
 
-.chapter {
+
+
+.hero-section {
+  display: flex;
+  background-image: url("../img/mod-studio-header-picture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center; 
+  align-items: center;
+  min-height: 630px;
+}
+
+.hero {
+  display: flex;
+  width: 690px;
+  height: 360px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.hero p {
+  font-size: 24px
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto, 0;
+}
+
+.section-name {
   font-size: 24px;
   font-weight: 700;
+  display: inline-block;
+  position: relative;
 }
 
 .rotated {
-  transform: rotate(-90deg);
+  rotate: -90deg;
 }
 
-.main-person-position-and-skills p {
+#biography {
+  top: 219px;
+  left: 49%;
+}
+
+.biography {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 137px;
+  padding-right: 138px;
+  padding-top: 150px;
+}
+
+.biography-image {
+  width: 49%;
+}
+
+.biography-text {
+  width: 39%;
+}
+
+.biography-title h2 {
+  margin-bottom: 20px;
+}
+
+.biography-title p {
   font-size: 20px;
   font-weight: 500;
+}
+
+hr {
+  width: 15px;
+  border: 2px solid black;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 blockquote {
@@ -48,12 +150,16 @@ blockquote {
   font-weight: 400;
 }
 
-.quote-1 {
+.biography-quote {
   font-size: 26px;
 }
 
 .quote-2 {
   font-size: 32px;
+}
+
+.useful-links ul {
+  list-style-type: none;
 }
 
 .designer-name, .from-and-skills dt {
@@ -75,38 +181,3 @@ blockquote {
   font-size: 24px;
   font-weight: 900;
 }
-
-/* 
-header**********
-Mod Play semibold 86px
-nav Rob medium 24px
-
-section 1*********
-play medium 86
-roboto medium 20
-
-section bio************
-Biography Roboto bold 24 (other menus are the same)
-Katya Play med 86
-art dir roboto med 20
-cite bitter reg 26
-
-section designers***********
-under figure roboto bold / regular 16
-
-section testimonials**********
-links roboto bold / regular 16
-cite bitter reg 32
-
-section strong points**********
-Strengths Play med 86
-list Bitter reg 34
-
-footer*************
-adress rob reg 16
-
-a product of rob reg 16 MOD rob black 24
-
-small rob reg 16
-
-*/

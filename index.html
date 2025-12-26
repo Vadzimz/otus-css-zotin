@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header content">
     <h1>Mod</h1>
-    <nav class="nav-list">
-      <ul>
+    <div class="header-spacer"></div>
+    <nav>
+      <ul class="nav-list">
         <li>
           <a href="#biography">Biography</a>
         </li>
@@ -26,126 +27,127 @@
         <li>
           <a href="#strong-points">Strong Points</a>
         </li>
-        <li>
-          <a href="#">
-            <img src="img/icons/more-options.svg" alt="More options">
-          </a>
-        </li>
       </ul>
     </nav>
+    <button class="btn"></button>
   </header>
   <!--Section-Just under header-->
-  <section class="company-name-with-background">
-    <hgroup class="company-name-and-short-description">
+  <section class="hero-section">
+    <hgroup class="hero">
       <h2>Mod Studio</h2>
       <p>Modern Web Studio</p>
     </hgroup>
-    <img src="img/mod-studio-header-picture.jpg" alt="Mod Studio">
   </section>
-  <!--Section Biography-->
-  <section class="biography">
-    <img src="img/katya-mills.jpg" alt="Katya Mills">
-    <h3 class="chapter rotated" id="biography">Biography</h3>
-    <hgroup class="main-person-position-and-skills">
-      <h2>Katya<br>Mills</h2>
-      <p>Art Director</p>
-      <p>Scenography/Styling/Creative Photography/Design</p>
-    </hgroup>
-    <hr>
-    <blockquote class="quote-1">
-      <p>“The more I deal with the work as something that is my own, as something that is personal, the more successful it is.”</p>
-    </blockquote>  
-  </section>
-  <!--Section Designers-->
-  <section class="designers">
-    <h3 class="chapter" id="designers">Designers</h3>
-    <ul>
-      <li>
-        <figure class="a-designer">
-          <img src="img/jess-wonder.jpg" alt="Jess Wonder">
-          <figcaption class="designer-annotation">
-            <h4 class="designer-name">JESS WONDER</h4>
-            <dl class="from-and-skills">
-              <dt>From/</dt>
-              <dd>Be more flower</dd>
-              <dt>Skills/</dt>
-              <dd>Design Strategy / Marketing</dd>
-            </dl>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure class="a-designer">
-          <img src="img/kameron-clein.jpg" alt="Kameron Clein">
-          <figcaption class="designer-annotation">
-            <h4 class="designer-name">KAMERON KLEIN</h4>
-            <dl class="from-and-skills">
-              <dt>From/</dt>
-              <dd>Be more flower</dd>
-              <dt>Skills/</dt>
-              <dd>Design Strategy / Marketing</dd>
-            </dl>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure class="a-designer">
-          <img src="img/louisse-red.jpg" alt="Louisse Red">
-          <figcaption class="designer-annotation">
-            <h4 class="designer-name">LOUISSE RED</h4>
-            <dl class="from-and-skills">
-              <dt>From/</dt>
-              <dd>Be more flower</dd>
-              <dt>Skills/</dt>
-              <dd>Design Strategy / Marketing</dd>
-            </dl>
-          </figcaption>
-        </figure>
-      </li>
-    </ul>
-  </section>
-  <!--Section Testimonials-->
-  <section class="testimonials">
-    <aside class="useful-links rotated">
-        <ul>
-          <li>
-            <p><strong>Website</strong><br><a href="#">www.whitepapers.com</a></p> 
-          </li>
-          <li>
-            <p><strong>Creativity</strong><br><a href="#">www.whitepapers.com</a></p> 
-          </li>
-          <li>
-            <p><strong>Creativity</strong><br><a href="#">www.whitepapers.com</a></p> 
-          </li>
-        </ul>
-    </aside>
-    <h3 class="chapter rotated" id="testimonials">Testimonials</h3>
-    <img src="img/cafe.jpg" alt="Cafe">
-    <blockquote class="quote-2">
-      <p>I just really want to do good work and work with some great people, people who challenge me.</p>
-    </blockquote>
-    <img src="img/person-with-bag.jpg" alt="Person with bag">
-  </section>
-  <!--Section Strengths-->
-  <section class="strong-points">
-    <h3 class="chapter" id="strong-points">Strong Points</h3>
-    <img src="img/notebook-on-table.jpg" alt="Notebook">
-    <img src="img/chair.jpg" alt="Chair">
-    <h2>Strengths</h2>
-    <ul class="strong-points-list">
-      <li>Interiors</li>
-      <li>Outdoors</li>
-      <li>Portraits</li>
-      <li>Styling</li>
-      <li>Events</li>
-      <li>Architecture</li>
-      <li>Design</li>
-      <li>Celebrations</li>
-      <li>Fashion</li>
-      <li>Nature</li>
-    </ul>
-    <img src="img/cafe.jpg" alt="Cafe">
-  </section>
+  <main class="container">
+    <!--Section Biography-->
+    <section >
+      <h3 class="section-name rotated" id="biography">Biography</h3>
+      <div class="biography">
+        <img class="biography-image" src="img/katya-mills.jpg" alt="Katya Mills">
+        <section class="biography-text">
+          <hgroup class="biography-title">
+            <h2>Katya<br>Mills</h2>
+            <p>Art Director</p>
+            <p>Scenography/Styling/Creative Photography/Design</p>
+          </hgroup>
+          <hr>
+          <blockquote class="biography-quote">
+            <p>“The more I deal with the work as something that is my own, as something that is personal, the more successful it is.”</p>
+          </blockquote>
+        </section>
+      </div>   
+    </section>
+    <!--Section Designers-->
+    <section class="designers">
+      <h3 class="section-name" id="designers">Designers</h3>
+      <ul>
+        <li>
+          <figure class="a-designer">
+            <img src="img/jess-wonder.jpg" alt="Jess Wonder">
+            <figcaption class="designer-annotation">
+              <h4 class="designer-name">JESS WONDER</h4>
+              <dl class="from-and-skills">
+                <dt>From/</dt>
+                <dd>Be more flower</dd>
+                <dt>Skills/</dt>
+                <dd>Design Strategy / Marketing</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="a-designer">
+            <img src="img/kameron-clein.jpg" alt="Kameron Clein">
+            <figcaption class="designer-annotation">
+              <h4 class="designer-name">KAMERON KLEIN</h4>
+              <dl class="from-and-skills">
+                <dt>From/</dt>
+                <dd>Be more flower</dd>
+                <dt>Skills/</dt>
+                <dd>Design Strategy / Marketing</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure class="a-designer">
+            <img src="img/louisse-red.jpg" alt="Louisse Red">
+            <figcaption class="designer-annotation">
+              <h4 class="designer-name">LOUISSE RED</h4>
+              <dl class="from-and-skills">
+                <dt>From/</dt>
+                <dd>Be more flower</dd>
+                <dt>Skills/</dt>
+                <dd>Design Strategy / Marketing</dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <!--Section Testimonials-->
+    <section class="testimonials">
+      <aside class="useful-links rotated">
+          <ul>
+            <li>
+              <p><strong>Website</strong><br><a href="#">www.whitepapers.com</a></p> 
+            </li>
+            <li>
+              <p><strong>Creativity</strong><br><a href="#">www.whitepapers.com</a></p> 
+            </li>
+            <li>
+              <p><strong>Creativity</strong><br><a href="#">www.whitepapers.com</a></p> 
+            </li>
+          </ul>
+      </aside>
+      <h3 class="section-name rotated" id="testimonials">Testimonials</h3>
+      <img src="img/cafe.jpg" alt="Cafe">
+      <blockquote class="quote-2">
+        <p>I just really want to do good work and work with some great people, people who challenge me.</p>
+      </blockquote>
+      <img src="img/person-with-bag.jpg" alt="Person with bag">
+    </section>
+    <!--Section Strengths-->
+    <section class="strong-points">
+      <h3 class="section-name" id="strong-points">Strong Points</h3>
+      <img src="img/notebook-on-table.jpg" alt="Notebook">
+      <img src="img/chair.jpg" alt="Chair">
+      <h2>Strengths</h2>
+      <ul class="strong-points-list">
+        <li>Interiors</li>
+        <li>Outdoors</li>
+        <li>Portraits</li>
+        <li>Styling</li>
+        <li>Events</li>
+        <li>Architecture</li>
+        <li>Design</li>
+        <li>Celebrations</li>
+        <li>Fashion</li>
+        <li>Nature</li>
+      </ul>
+      <img src="img/cafe.jpg" alt="Cafe">
+    </section>
+  </main>
   <footer class="footer">
     <address class="phone-and-mail">
       <p><a href="tel:+79211234567">+7 921 123-45-67</a></p>
