@@ -30,8 +30,21 @@ h1, h2 {
   font-weight: 500;
 }
 
+h4 {
+  font-weight: 700;
+}
+
 dt {
   font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+blockquote {
+  font-family: "Bitter";
+  font-weight: 400;
 }
 
 /* Header section styles */
@@ -59,7 +72,6 @@ dt {
   flex-wrap: wrap;
   align-items: center;
   gap: 55px;
-  list-style-type: none;
 }
 
 .btn {
@@ -103,8 +115,14 @@ dt {
   justify-content: space-evenly;
   gap: 150px;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin: 150px auto;
+}
+
+.designers, .strong-points {
+  overflow-x: auto;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .section-name {
@@ -155,15 +173,47 @@ hr {
   margin-bottom: 22px;
 }
 
-blockquote {
-  font-family: "Bitter";
-  font-weight: 400;
-}
-
 .biography-quote {
   font-size: 26px;
   padding-right: 77px;
 }
+
+/* Designers section styles */
+
+#designers, #strong-points {
+  padding-bottom: 30px;
+  padding-left: 119px;
+}
+
+.designers-list {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 20px;
+}
+
+.designer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: end;
+}
+
+.designer-annotation, .designer-smaller-image{
+  width: 337px;
+}
+
+.designer-bigger-image {
+  width: 572px;
+}
+
+.from-and-skills :is(dt, dd) {
+  display: inline-block;
+}
+
+/* .designer-name {
+  font-weight: 700;
+} */
 
 /* Testimonials section styles*/
 
@@ -206,15 +256,38 @@ blockquote {
   font-size: 32px;
 }
 
-.designer-name, .from-and-skills dt {
-  font-weight: 700;
+/* Strengths section styles */
+
+.strong-points-images-and-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 21px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .strong-points-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Bitter";
   font-size: 34px;
   font-weight: 400;
-  list-style-type: none;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.strong-points-images-and-list img {
+  width: 335px;
 }
 
 /* Footer section styles */
