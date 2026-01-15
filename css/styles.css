@@ -30,6 +30,12 @@ h1, h2 {
   font-weight: 500;
 }
 
+dt {
+  font-weight: 700;
+}
+
+/* Header section styles */
+
 .header {
   display: flex;
   align-items: center;
@@ -63,6 +69,8 @@ h1, h2 {
   background-image: url("../img/icons/more-options.svg");
   background-color: white;
 }
+
+/* Hero section styles */
 
 .hero-section {
   display: flex;
@@ -102,14 +110,16 @@ h1, h2 {
 .section-name {
   font-size: 24px;
   font-weight: 700;
-  display: inline-block;
-  /* width: 12%; */
 }
 
 .rotated {
-  rotate: -90deg;
-  transform-origin: top right;
-  translate: -95px;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+
+/* Biography section styles */
+
+#biography {
   align-self: flex-start;
 }
 
@@ -155,12 +165,45 @@ blockquote {
   padding-right: 77px;
 }
 
-.quote-2 {
-  font-size: 32px;
+/* Testimonials section styles*/
+
+.testimonials {
+  display: grid;
+  max-width: 1120px;
+  grid-template-columns: 7% 40% 6% 47%;
+  grid-template-areas: "col-1 col-2 col-3 col-4";
+  justify-items: center;
+  align-items: stretch;
 }
 
-.useful-links ul {
+.testimonials-links {
+  grid-area: col-1;
+  display: flex;
+  justify-content: space-around;
   list-style-type: none;
+}
+
+.testimonials-main-image {
+  grid-area: col-2;
+  width: 100%;
+}
+
+#testimonials {
+  grid-area: col-3;
+  text-align: right;
+}
+
+.testimonials-info {
+  grid-area: col-4;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 41%;
+  text-align: center;
+}
+
+.testimonials-quote {
+  font-size: 32px;
 }
 
 .designer-name, .from-and-skills dt {
@@ -172,6 +215,18 @@ blockquote {
   font-size: 34px;
   font-weight: 400;
   list-style-type: none;
+}
+
+/* Footer section styles */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .phone-and-mail {
