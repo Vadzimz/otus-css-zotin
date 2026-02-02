@@ -40,7 +40,17 @@
   <main class="container">
     <!--Section Biography-->
     <section class="biography" >
-      <img class="biography-image" src="img/katya-mills.jpg" alt="Katya Mills">
+      <img 
+        class="biography-image"
+        srcset="
+          img/katya-mills-small.jpg 450w,
+          img/katya-mills-medium.jpg 768w"
+        sizes="
+          (max-width: 450px) 450px,
+          (min-width: 451px) 768px"
+        src="img/katya-mills-medium.jpg"
+        alt="Katya Mills"
+      >
       <h3 class="section-name rotated" id="biography">Biography</h3>
       <section class="biography-text">
         <hgroup class="biography-title">
