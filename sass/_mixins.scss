@@ -1,0 +1,14 @@
+@mixin font-set($fm: ("Roboto", Arial, sans-serif), $sz: 16px, $wt: 400) {
+  font: {
+    family: $fm;
+    size: $sz;
+    weight: $wt
+  }
+}
+
+@mixin flex-set($dir: row, $jc: space-between, $ai: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+}
