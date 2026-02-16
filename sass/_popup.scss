@@ -1,0 +1,102 @@
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.feedback {
+  margin: auto;
+  position: relative;
+  overflow: visible;
+  width: 478px;
+  height: 577px;
+  border: none;
+  border-radius: 8px;
+  &::backdrop {
+    background-color: #817E7E;
+    opacity: 0.6;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    outline: 2px solid white;
+    rotate: 3deg;
+    z-index: -1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: inherit;
+    padding: 0 20px;
+    
+    @include font-set;
+
+    h2 { @include font-set($sz: 24px, $wt: bold); }
+
+    p { max-width: 85% }
+    
+    label {
+      font-weight: bold;
+      font-size: 18px;
+      display: grid;
+      gap: 12px;
+      width: 100%;
+
+      input {
+        height: 42px;
+      }
+
+      input, textarea {
+        padding: 4px 8px;
+        border-radius: 10px;
+        border: none;
+        outline: 2px solid lightgray;
+
+      }
+    }
+
+  }
+
+  &__buttons {
+    width: 100%;
+    padding: 2px 0;
+    height: 52px;
+    display: flex;
+    gap: 8px;
+    * { 
+      flex: 1 1 0;
+      border-radius: 8px;
+      font-size: 18px;
+      border: none;
+
+      &:first-child {
+        background-color: #fff;
+        outline: 2px solid lightgray;
+      }
+
+      &:last-child {
+        color: white;
+        background-color: black;
+        outline-color: black;
+        &:disabled {
+          background-color: lightgray;
+          outline-color: lightgray;
+        }
+      }
+     }
+  }  
+}
+
+@media (max-width: 540px) {
+  .feedback {
+    width: 363px;
+    height: 589px;
+  }
+}
+
+@media (max-width:430px) {
+  .feedback::before { display: none; }
+}
