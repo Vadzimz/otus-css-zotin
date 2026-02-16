@@ -341,7 +341,7 @@ hr {
   }
   .nav-list li {
     color: #fff;
-    width: 27px;
+    width: 31px;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -569,5 +569,104 @@ hr {
   .testimonials__quote {
     padding: 0;
     width: 85%;
+  }
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.feedback {
+  margin: auto;
+  position: relative;
+  overflow: visible;
+  width: 478px;
+  height: 577px;
+  border: none;
+  border-radius: 8px;
+}
+.feedback::backdrop {
+  background-color: #817E7E;
+  opacity: 0.6;
+}
+.feedback:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  outline: 2px solid white;
+  rotate: 3deg;
+  z-index: -1;
+}
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: inherit;
+  padding: 0 20px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.feedback form h2 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+.feedback form p {
+  max-width: 85%;
+}
+.feedback form label {
+  font-weight: bold;
+  font-size: 18px;
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+.feedback form label input {
+  height: 42px;
+}
+.feedback form label input, .feedback form label textarea {
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: none;
+  outline: 2px solid lightgray;
+}
+.feedback__buttons {
+  width: 100%;
+  padding: 2px 0;
+  height: 52px;
+  display: flex;
+  gap: 8px;
+}
+.feedback__buttons * {
+  flex: 1 1 0;
+  border-radius: 8px;
+  font-size: 18px;
+  border: none;
+}
+.feedback__buttons *:first-child {
+  background-color: #fff;
+  outline: 2px solid lightgray;
+}
+.feedback__buttons *:last-child {
+  color: white;
+  background-color: black;
+  outline-color: black;
+}
+.feedback__buttons *:last-child:disabled {
+  background-color: lightgray;
+  outline-color: lightgray;
+}
+
+@media (max-width: 540px) {
+  .feedback {
+    width: 363px;
+    height: 589px;
+  }
+}
+@media (max-width: 430px) {
+  .feedback::before {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

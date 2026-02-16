@@ -16,22 +16,25 @@
   <header class="header content">
     <h1>Mod</h1>
     <nav>
-    <ul class="nav-list">
-      <li>
-        <a href="#biography">Bio&shy;graphy</a>
-      </li>
-      <li>
-        <a href="#designers">Desig&shy;ners</a>
-      </li>
-      <li>
-        <a href="#testimonials">Testi&shy;monials</a>
-      </li>
-      <li>
-        <a href="#strong-points">Strong Points</a>
-      </li>
-      <button href="#" class="nav-list__button"></button>
-    </ul>
-  </nav>
+      <ul class="nav-list">
+        <li>
+          <a href="#biography">Bio&shy;graphy</a>
+        </li>
+        <li>
+          <a href="#designers">Desig&shy;ners</a>
+        </li>
+        <li>
+          <a href="#testimonials">Testi&shy;monials</a>
+        </li>
+        <li>
+          <a href="#strong-points">Strong Points</a>
+        </li>
+        <!-- <button popovertarget="feedback" class="nav-list__button"></button> -->
+        <li>
+          <button type="button" class="nav-list__button" onclick="window.feedback.showModal()"></button>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!-- *************-->
   <!-- Hero section -->
@@ -212,6 +215,28 @@
     <small class="footer__copyright">© 2023 Mod Media. All rights reserved</small>
   </footer>  
 </body>
+<dialog class="feedback" id="feedback">
+  <form action="#" method="dialog">
+    <h2>Get in touch</h2>
+    <p>Do you have any questions? Have something to say? Don't be shy, write to us:</p>
+    <label>
+      Name
+      <input autofocus required type="text" name="username" placeholder="3+ Characters">
+    </label>
+    <label>
+      E-mail
+      <input required type="email" name="email" placeholder="name@email.com">
+    </label>
+    <label>
+      Comment
+      <textarea name="comment" placeholder="Some text..." rows="6"></textarea>
+    </label>
+    <div class="feedback__buttons">
+      <button type="reset">Cancel</button>
+      <button disabled type="submit">+ Send</button>
+    </div>
+  </form>
+</dialog>
 </html>
 
 
