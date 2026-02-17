@@ -39,11 +39,18 @@ body:has(dialog[open]) {
     p { max-width: 85% }
     
     label {
+      position: relative;
       font-weight: bold;
       font-size: 18px;
       display: grid;
       gap: 12px;
       width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        right: 8px;
+      }
 
       input {
         height: 42px;
@@ -58,6 +65,17 @@ body:has(dialog[open]) {
       }
     }
 
+    .input-name::before {
+      content: url("../img/icons/inside-placeholders/icon-edit-name.svg");
+    }
+
+    .input-email::before {
+      content: url("../img/icons/inside-placeholders/icon-mail.svg");
+    }
+
+    .input-comments::before {
+      content: url("../img/icons/inside-placeholders/icon-comment.svg");
+    }
   }
 
   &__buttons {

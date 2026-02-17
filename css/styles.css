@@ -617,11 +617,18 @@ body:has(dialog[open]) {
   max-width: 85%;
 }
 .feedback form label {
+  position: relative;
   font-weight: bold;
   font-size: 18px;
   display: grid;
   gap: 12px;
   width: 100%;
+}
+.feedback form label::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 8px;
 }
 .feedback form label input {
   height: 42px;
@@ -631,6 +638,15 @@ body:has(dialog[open]) {
   border-radius: 10px;
   border: none;
   outline: 2px solid lightgray;
+}
+.feedback form .input-name::before {
+  content: url("../img/icons/inside-placeholders/icon-edit-name.svg");
+}
+.feedback form .input-email::before {
+  content: url("../img/icons/inside-placeholders/icon-mail.svg");
+}
+.feedback form .input-comments::before {
+  content: url("../img/icons/inside-placeholders/icon-comment.svg");
 }
 .feedback__buttons {
   width: 100%;
