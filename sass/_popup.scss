@@ -60,7 +60,16 @@ body:has(dialog[open]) {
         padding: 4px 8px;
         border-radius: 10px;
         border: none;
-        outline: 2px solid lightgray;
+        outline: 2px solid #b3b3b3;
+        &::placeholder {
+          color: #868686
+        }
+        &:hover {
+          background-color: #ededed;
+        }
+        &:focus {
+          outline-color: #e0b59f;
+        }
 
       }
     }
@@ -90,22 +99,68 @@ body:has(dialog[open]) {
       font-size: 18px;
       border: none;
 
-      &:first-child {
+      &[type="reset"] {
         background-color: #fff;
-        outline: 2px solid lightgray;
-      }
+        outline: 2px solid #b3b3b3;
 
-      &:last-child {
-        color: white;
-        background-color: black;
-        outline-color: black;
+        &:hover {
+          background-color: #d7c8c1;
+          outline: 2px solid #e0b59f;
+        }
+        &:focus {
+          background-color: #fff;
+          outline: 3px double #e0b59f;
+        }
+        &:active {
+          background-color: #e0b59f;
+          outline: 2px solid #d7c8c1;
+        }
         &:disabled {
-          background-color: lightgray;
-          outline-color: lightgray;
+          color: #cccccc;
+          // background-color: #fff;
+          outline: 2px solid #cccccc;
         }
       }
-     }
-  }  
+
+      &[type="submit"] {
+        color: white;
+        background-color: black;
+        &:disabled {
+          background-color: #cccccc;
+          // outline-color: #cccccc;
+        }
+        &:hover {
+          background-color: #a07c72;
+        }
+        &:focus {
+          background-color: #fff;
+          outline: 3px double #e0b59f;
+        }
+        &:active {
+          background-color: #e0b59f;
+        }
+      }
+    }
+  }
+  
+  // pseudo disabled submit button
+  form:invalid {
+    button[type="submit"] {
+            pointer-events: none;
+            background-color: #cccccc; 
+          }
+  }
+
+  // pseudo disabled reset button
+  // not working yet :(
+
+  // form:placeholder-shown:required {
+  //   button[type="reset"] {
+  //           pointer-events: none;
+  //           color: #cccccc;
+  //           outline: 2px solid #cccccc;
+  //         }
+  // }
 }
 
 @media (max-width: 540px) {

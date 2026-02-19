@@ -38,6 +38,10 @@ blockquote {
   font-weight: 500;
   gap: 55px;
 
+  a {
+    &:focus { color: #e0b59f; }
+  }
+
   &__button {
     width: 31px;
     height: 30px;
@@ -47,6 +51,10 @@ blockquote {
     flex-shrink: 0;
     background-image: url("../img/icons/more-options.svg");
     background-color: white;
+
+    // &:hover { color: #a07c72; }
+    // &:active { color: #e0b59f; }
+    // &:focus { color: #a07c72; }
   }
 }
 
@@ -92,6 +100,12 @@ blockquote {
 .section-name {
   font-size: 24px;
   font-weight: 700;
+  &:target {
+    color: #a07c72;
+    // border: 2px solid #e0b59f;
+    // padding: 10px;
+    // border-radius: 10px;
+  }
 }
 
 .rotated {
@@ -344,6 +358,7 @@ hr {
         font-family: "Bitter";
         font-weight: 400;
         font-size: 40px;
+        
       }
     }
 

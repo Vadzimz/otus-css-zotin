@@ -85,6 +85,9 @@ blockquote {
   font-weight: 500;
   gap: 55px;
 }
+.nav-list a:focus {
+  color: #e0b59f;
+}
 .nav-list__button {
   width: 31px;
   height: 30px;
@@ -143,6 +146,9 @@ blockquote {
 .section-name {
   font-size: 24px;
   font-weight: 700;
+}
+.section-name:target {
+  color: #a07c72;
 }
 
 .rotated {
@@ -637,7 +643,19 @@ body:has(dialog[open]) {
   padding: 4px 8px;
   border-radius: 10px;
   border: none;
-  outline: 2px solid lightgray;
+  outline: 2px solid #b3b3b3;
+}
+.feedback form label input::-moz-placeholder, .feedback form label textarea::-moz-placeholder {
+  color: #868686;
+}
+.feedback form label input::placeholder, .feedback form label textarea::placeholder {
+  color: #868686;
+}
+.feedback form label input:hover, .feedback form label textarea:hover {
+  background-color: #ededed;
+}
+.feedback form label input:focus, .feedback form label textarea:focus {
+  outline-color: #e0b59f;
 }
 .feedback form .input-name::before {
   content: url("../img/icons/inside-placeholders/icon-edit-name.svg");
@@ -661,18 +679,46 @@ body:has(dialog[open]) {
   font-size: 18px;
   border: none;
 }
-.feedback__buttons *:first-child {
+.feedback__buttons *[type=reset] {
   background-color: #fff;
-  outline: 2px solid lightgray;
+  outline: 2px solid #b3b3b3;
 }
-.feedback__buttons *:last-child {
+.feedback__buttons *[type=reset]:hover {
+  background-color: #d7c8c1;
+  outline: 2px solid #e0b59f;
+}
+.feedback__buttons *[type=reset]:focus {
+  background-color: #fff;
+  outline: 3px double #e0b59f;
+}
+.feedback__buttons *[type=reset]:active {
+  background-color: #e0b59f;
+  outline: 2px solid #d7c8c1;
+}
+.feedback__buttons *[type=reset]:disabled {
+  color: #cccccc;
+  outline: 2px solid #cccccc;
+}
+.feedback__buttons *[type=submit] {
   color: white;
   background-color: black;
-  outline-color: black;
 }
-.feedback__buttons *:last-child:disabled {
-  background-color: lightgray;
-  outline-color: lightgray;
+.feedback__buttons *[type=submit]:disabled {
+  background-color: #cccccc;
+}
+.feedback__buttons *[type=submit]:hover {
+  background-color: #a07c72;
+}
+.feedback__buttons *[type=submit]:focus {
+  background-color: #fff;
+  outline: 3px double #e0b59f;
+}
+.feedback__buttons *[type=submit]:active {
+  background-color: #e0b59f;
+}
+.feedback form:invalid button[type=submit] {
+  pointer-events: none;
+  background-color: #cccccc;
 }
 
 @media (max-width: 540px) {
