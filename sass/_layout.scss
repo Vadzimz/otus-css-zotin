@@ -38,23 +38,36 @@ blockquote {
   font-weight: 500;
   gap: 55px;
 
-  a {
-    &:focus { color: #e0b59f; }
+  &__link {
+    &:hover { text-decoration: underline;}
+    &:focus { color: #a07c72;
+              padding: 10px;
+              border: 2px solid #e0b59f;
+              border-radius: 10px;
+              text-decoration: none;
+            }
+    &:active { color: #e0b59f;
+               border: none; }
+  }
+
+  &:last-child {
+    overflow: visible;
   }
 
   &__button {
-    width: 31px;
-    height: 30px;
     border: none;
     margin-right: 20px;
     margin-left: -25px;
-    flex-shrink: 0;
-    background-image: url("../img/icons/more-options.svg");
     background-color: white;
 
-    // &:hover { color: #a07c72; }
-    // &:active { color: #e0b59f; }
-    // &:focus { color: #a07c72; }
+    &:hover { color: #a07c72; }
+    &:focus { color: #a07c72;
+              padding: 10px;
+              border: 2px solid #e0b59f;
+              border-radius: 10px;
+            }
+    &:active { color: #e0b59f;
+               border: none; }
   }
 }
 
@@ -101,10 +114,7 @@ blockquote {
   font-size: 24px;
   font-weight: 700;
   &:target {
-    color: #a07c72;
-    // border: 2px solid #e0b59f;
-    // padding: 10px;
-    // border-radius: 10px;
+    color: blue;
   }
 }
 
@@ -347,20 +357,33 @@ hr {
   }
 
   .nav-list {
+      &__link {
 
-    li {
-      color: #fff;
-      width: 31px;
-      white-space: nowrap;
-      overflow: hidden;
-      &::first-letter {
-        color: black;
-        font-family: "Bitter";
-        font-weight: 400;
-        font-size: 40px;
+        &:hover {
+          text-decoration: none;
+        }
+        &:focus {
+          padding: 10px;
+          border: 2px solid #e0b59f;
+          border-radius: 10px;
+        }
+
+        &_first-letter {
+          color: black;
+          font-family: "Bitter";
+          font-weight: 400;
+          font-size: 40px;
+
+          &:hover { color: #a07c72 }
+          &:focus { color: red }
+          &:active { color: #e0b59f }
+        }
+
+        &_but-first-letter {
+          display: none;
+        }
         
       }
-    }
 
     &__button {
       margin: 0;

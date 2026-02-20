@@ -71,6 +71,12 @@ body:has(dialog[open]) {
           outline-color: #e0b59f;
         }
 
+        // error style is working on edge, not on firefox
+        
+        // &[type="email"]:not(:placeholder-shown):invalid {
+        //   outline: 4px dashed red;
+        // }
+
       }
     }
 
@@ -117,7 +123,6 @@ body:has(dialog[open]) {
         }
         &:disabled {
           color: #cccccc;
-          // background-color: #fff;
           outline: 2px solid #cccccc;
         }
       }
@@ -152,9 +157,8 @@ body:has(dialog[open]) {
   }
 
   // pseudo disabled reset button
-  // not working yet :(
 
-  // form:placeholder-shown:required {
+  // form input:placeholder-shown:required {
   //   button[type="reset"] {
   //           pointer-events: none;
   //           color: #cccccc;
