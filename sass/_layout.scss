@@ -39,15 +39,19 @@ blockquote {
   gap: 55px;
 
   &__link {
-    &:hover { text-decoration: underline;}
-    &:focus { color: #a07c72;
-              padding: 10px;
-              border: 2px solid #e0b59f;
-              border-radius: 10px;
+    transition: all 0.5s ease;
+    &:focus-visible { color: #a07c72;
+              border-radius: 5px;
+              outline: 2px solid #e0b59f;
+              outline-offset: 10px;
               text-decoration: none;
             }
+
+    &:hover { text-decoration: underline;}
+    
     &:active { color: #e0b59f;
-               border: none; }
+              //  border: none; 
+              }
   }
 
   &:last-child {
@@ -59,15 +63,16 @@ blockquote {
     margin-right: 20px;
     margin-left: -25px;
     background-color: white;
+    transition: all 0.5s ease;
 
     &:hover { color: #a07c72; }
-    &:focus { color: #a07c72;
-              padding: 10px;
-              border: 2px solid #e0b59f;
-              border-radius: 10px;
-            }
-    &:active { color: #e0b59f;
-               border: none; }
+    &:focus-visible { 
+      color: #a07c72;
+      outline: 2px solid #e0b59f;
+      outline-offset: 10px;
+      border-radius: 5px;
+      }
+    &:active { color: #e0b59f; }
   }
 }
 
@@ -362,20 +367,18 @@ hr {
         &:hover {
           text-decoration: none;
         }
-        &:focus {
-          padding: 10px;
-          border: 2px solid #e0b59f;
-          border-radius: 10px;
-        }
 
         &_first-letter {
-          color: black;
           font-family: "Bitter";
           font-weight: 400;
           font-size: 40px;
 
+          &:focus-visible { color: #a07c72;
+            outline: 2px solid #e0b59f;
+            outline-offset: 5px;
+            border-radius: 5px;
+          }
           &:hover { color: #a07c72 }
-          &:focus { color: red }
           &:active { color: #e0b59f }
         }
 

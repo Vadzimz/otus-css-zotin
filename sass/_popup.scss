@@ -61,16 +61,19 @@ body:has(dialog[open]) {
         border-radius: 10px;
         border: none;
         outline: 2px solid #b3b3b3;
+        transition: background-color 0.5s ease;
         &::placeholder {
           color: #868686
         }
-        &:hover {
-          background-color: #ededed;
-        }
-        &:focus {
+
+        &:focus-visible {
           outline-color: #e0b59f;
         }
 
+        &:hover {
+          background-color: #ededed;
+        }
+        
         // error style is working on edge, not on firefox
         
         // &[type="email"]:not(:placeholder-shown):invalid {
@@ -104,19 +107,23 @@ body:has(dialog[open]) {
       border-radius: 8px;
       font-size: 18px;
       border: none;
+      transition: background-color 0.5s ease;
 
       &[type="reset"] {
+
         background-color: #fff;
         outline: 2px solid #b3b3b3;
+        transition: all 0.5s ease;
+
+        &:focus-visible {
+          box-shadow: 0 0 0 3px white, 0 0 0 5px #e0b59f;
+        }
 
         &:hover {
           background-color: #d7c8c1;
           outline: 2px solid #e0b59f;
         }
-        &:focus {
-          background-color: #fff;
-          outline: 3px double #e0b59f;
-        }
+        
         &:active {
           background-color: #e0b59f;
           outline: 2px solid #d7c8c1;
@@ -130,20 +137,22 @@ body:has(dialog[open]) {
       &[type="submit"] {
         color: white;
         background-color: black;
-        &:disabled {
-          background-color: #cccccc;
-          // outline-color: #cccccc;
+        transition: all 0.5s ease;
+
+        &:focus-visible {
+          // background-color: #fff;
+          outline: 2px solid #e0b59f;
+          outline-offset: 2px;
         }
+
         &:hover {
           background-color: #a07c72;
+          // box-shadow: 0 0 5px 5px #dddddd;
         }
-        &:focus {
-          background-color: #fff;
-          outline: 3px double #e0b59f;
-        }
+        
         &:active {
           background-color: #e0b59f;
-        }
+        }      
       }
     }
   }
