@@ -29,10 +29,6 @@ a {
   all: unset;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
@@ -85,15 +81,43 @@ blockquote {
   font-weight: 500;
   gap: 55px;
 }
+.nav-list__link {
+  transition: all 0.5s ease;
+}
+.nav-list__link:focus-visible {
+  color: #a07c72;
+  border-radius: 5px;
+  outline: 2px solid #e0b59f;
+  outline-offset: 10px;
+  text-decoration: none;
+}
+.nav-list__link:hover {
+  text-decoration: underline;
+}
+.nav-list__link:active {
+  color: #e0b59f;
+}
+.nav-list:last-child {
+  overflow: visible;
+}
 .nav-list__button {
-  width: 31px;
-  height: 30px;
   border: none;
   margin-right: 20px;
   margin-left: -25px;
-  flex-shrink: 0;
-  background-image: url("../img/icons/more-options.svg");
   background-color: white;
+  transition: all 0.5s ease;
+}
+.nav-list__button:hover {
+  color: #a07c72;
+}
+.nav-list__button:focus-visible {
+  color: #a07c72;
+  outline: 2px solid #e0b59f;
+  outline-offset: 10px;
+  border-radius: 5px;
+}
+.nav-list__button:active {
+  color: #e0b59f;
 }
 
 /* hero - desktop */
@@ -143,6 +167,9 @@ blockquote {
 .section-name {
   font-size: 24px;
   font-weight: 700;
+}
+.section-name:target {
+  color: blue;
 }
 
 .rotated {
@@ -339,17 +366,28 @@ hr {
     width: 100%;
     padding: 0 45px;
   }
-  .nav-list li {
-    color: #fff;
-    width: 31px;
-    white-space: nowrap;
-    overflow: hidden;
+  .nav-list__link:hover {
+    text-decoration: none;
   }
-  .nav-list li::first-letter {
-    color: black;
+  .nav-list__link_first-letter {
     font-family: "Bitter";
     font-weight: 400;
     font-size: 40px;
+  }
+  .nav-list__link_first-letter:focus-visible {
+    color: #a07c72;
+    outline: 2px solid #e0b59f;
+    outline-offset: 5px;
+    border-radius: 5px;
+  }
+  .nav-list__link_first-letter:hover {
+    color: #a07c72;
+  }
+  .nav-list__link_first-letter:active {
+    color: #e0b59f;
+  }
+  .nav-list__link_but-first-letter {
+    display: none;
   }
   .nav-list__button {
     margin: 0;
@@ -617,11 +655,18 @@ body:has(dialog[open]) {
   max-width: 85%;
 }
 .feedback form label {
+  position: relative;
   font-weight: bold;
   font-size: 18px;
   display: grid;
   gap: 12px;
   width: 100%;
+}
+.feedback form label::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 8px;
 }
 .feedback form label input {
   height: 42px;
@@ -630,7 +675,29 @@ body:has(dialog[open]) {
   padding: 4px 8px;
   border-radius: 10px;
   border: none;
-  outline: 2px solid lightgray;
+  outline: 2px solid #b3b3b3;
+  transition: background-color 0.5s ease;
+}
+.feedback form label input::-moz-placeholder, .feedback form label textarea::-moz-placeholder {
+  color: #868686;
+}
+.feedback form label input::placeholder, .feedback form label textarea::placeholder {
+  color: #868686;
+}
+.feedback form label input:focus-visible, .feedback form label textarea:focus-visible {
+  outline-color: #e0b59f;
+}
+.feedback form label input:hover, .feedback form label textarea:hover {
+  background-color: #ededed;
+}
+.feedback form .input-name::before {
+  content: url("../img/icons/inside-placeholders/icon-edit-name.svg");
+}
+.feedback form .input-email::before {
+  content: url("../img/icons/inside-placeholders/icon-mail.svg");
+}
+.feedback form .input-comments::before {
+  content: url("../img/icons/inside-placeholders/icon-comment.svg");
 }
 .feedback__buttons {
   width: 100%;
@@ -644,19 +711,46 @@ body:has(dialog[open]) {
   border-radius: 8px;
   font-size: 18px;
   border: none;
+  transition: background-color 0.5s ease;
 }
-.feedback__buttons *:first-child {
+.feedback__buttons *[type=reset] {
   background-color: #fff;
-  outline: 2px solid lightgray;
+  outline: 2px solid #b3b3b3;
+  transition: all 0.5s ease;
 }
-.feedback__buttons *:last-child {
+.feedback__buttons *[type=reset]:focus-visible {
+  box-shadow: 0 0 0 3px white, 0 0 0 5px #e0b59f;
+}
+.feedback__buttons *[type=reset]:hover {
+  background-color: #d7c8c1;
+  outline: 2px solid #e0b59f;
+}
+.feedback__buttons *[type=reset]:active {
+  background-color: #e0b59f;
+  outline: 2px solid #d7c8c1;
+}
+.feedback__buttons *[type=reset]:disabled {
+  color: #cccccc;
+  outline: 2px solid #cccccc;
+}
+.feedback__buttons *[type=submit] {
   color: white;
   background-color: black;
-  outline-color: black;
+  transition: all 0.5s ease;
 }
-.feedback__buttons *:last-child:disabled {
-  background-color: lightgray;
-  outline-color: lightgray;
+.feedback__buttons *[type=submit]:focus-visible {
+  outline: 2px solid #e0b59f;
+  outline-offset: 2px;
+}
+.feedback__buttons *[type=submit]:hover {
+  background-color: #a07c72;
+}
+.feedback__buttons *[type=submit]:active {
+  background-color: #e0b59f;
+}
+.feedback form:invalid button[type=submit] {
+  pointer-events: none;
+  background-color: #cccccc;
 }
 
 @media (max-width: 540px) {

@@ -38,15 +38,41 @@ blockquote {
   font-weight: 500;
   gap: 55px;
 
+  &__link {
+    transition: all 0.5s ease;
+    &:focus-visible { color: #a07c72;
+              border-radius: 5px;
+              outline: 2px solid #e0b59f;
+              outline-offset: 10px;
+              text-decoration: none;
+            }
+
+    &:hover { text-decoration: underline;}
+    
+    &:active { color: #e0b59f;
+              //  border: none; 
+              }
+  }
+
+  &:last-child {
+    overflow: visible;
+  }
+
   &__button {
-    width: 31px;
-    height: 30px;
     border: none;
     margin-right: 20px;
     margin-left: -25px;
-    flex-shrink: 0;
-    background-image: url("../img/icons/more-options.svg");
     background-color: white;
+    transition: all 0.5s ease;
+
+    &:hover { color: #a07c72; }
+    &:focus-visible { 
+      color: #a07c72;
+      outline: 2px solid #e0b59f;
+      outline-offset: 10px;
+      border-radius: 5px;
+      }
+    &:active { color: #e0b59f; }
   }
 }
 
@@ -92,6 +118,9 @@ blockquote {
 .section-name {
   font-size: 24px;
   font-weight: 700;
+  &:target {
+    color: blue;
+  }
 }
 
 .rotated {
@@ -333,19 +362,31 @@ hr {
   }
 
   .nav-list {
+      &__link {
 
-    li {
-      color: #fff;
-      width: 31px;
-      white-space: nowrap;
-      overflow: hidden;
-      &::first-letter {
-        color: black;
-        font-family: "Bitter";
-        font-weight: 400;
-        font-size: 40px;
+        &:hover {
+          text-decoration: none;
+        }
+
+        &_first-letter {
+          font-family: "Bitter";
+          font-weight: 400;
+          font-size: 40px;
+
+          &:focus-visible { color: #a07c72;
+            outline: 2px solid #e0b59f;
+            outline-offset: 5px;
+            border-radius: 5px;
+          }
+          &:hover { color: #a07c72 }
+          &:active { color: #e0b59f }
+        }
+
+        &_but-first-letter {
+          display: none;
+        }
+        
       }
-    }
 
     &__button {
       margin: 0;

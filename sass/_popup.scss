@@ -39,11 +39,18 @@ body:has(dialog[open]) {
     p { max-width: 85% }
     
     label {
+      position: relative;
       font-weight: bold;
       font-size: 18px;
       display: grid;
       gap: 12px;
       width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        right: 8px;
+      }
 
       input {
         height: 42px;
@@ -53,11 +60,40 @@ body:has(dialog[open]) {
         padding: 4px 8px;
         border-radius: 10px;
         border: none;
-        outline: 2px solid lightgray;
+        outline: 2px solid #b3b3b3;
+        transition: background-color 0.5s ease;
+        &::placeholder {
+          color: #868686
+        }
+
+        &:focus-visible {
+          outline-color: #e0b59f;
+        }
+
+        &:hover {
+          background-color: #ededed;
+        }
+        
+        // error style is working on edge, not on firefox
+        
+        // &[type="email"]:not(:placeholder-shown):invalid {
+        //   outline: 4px dashed red;
+        // }
 
       }
     }
 
+    .input-name::before {
+      content: url("../img/icons/inside-placeholders/icon-edit-name.svg");
+    }
+
+    .input-email::before {
+      content: url("../img/icons/inside-placeholders/icon-mail.svg");
+    }
+
+    .input-comments::before {
+      content: url("../img/icons/inside-placeholders/icon-comment.svg");
+    }
   }
 
   &__buttons {
@@ -71,23 +107,73 @@ body:has(dialog[open]) {
       border-radius: 8px;
       font-size: 18px;
       border: none;
+      transition: background-color 0.5s ease;
 
-      &:first-child {
+      &[type="reset"] {
+
         background-color: #fff;
-        outline: 2px solid lightgray;
-      }
+        outline: 2px solid #b3b3b3;
+        transition: all 0.5s ease;
 
-      &:last-child {
-        color: white;
-        background-color: black;
-        outline-color: black;
+        &:focus-visible {
+          box-shadow: 0 0 0 3px white, 0 0 0 5px #e0b59f;
+        }
+
+        &:hover {
+          background-color: #d7c8c1;
+          outline: 2px solid #e0b59f;
+        }
+        
+        &:active {
+          background-color: #e0b59f;
+          outline: 2px solid #d7c8c1;
+        }
         &:disabled {
-          background-color: lightgray;
-          outline-color: lightgray;
+          color: #cccccc;
+          outline: 2px solid #cccccc;
         }
       }
-     }
-  }  
+
+      &[type="submit"] {
+        color: white;
+        background-color: black;
+        transition: all 0.5s ease;
+
+        &:focus-visible {
+          // background-color: #fff;
+          outline: 2px solid #e0b59f;
+          outline-offset: 2px;
+        }
+
+        &:hover {
+          background-color: #a07c72;
+          // box-shadow: 0 0 5px 5px #dddddd;
+        }
+        
+        &:active {
+          background-color: #e0b59f;
+        }      
+      }
+    }
+  }
+  
+  // pseudo disabled submit button
+  form:invalid {
+    button[type="submit"] {
+            pointer-events: none;
+            background-color: #cccccc; 
+          }
+  }
+
+  // pseudo disabled reset button
+
+  // form input:placeholder-shown:required {
+  //   button[type="reset"] {
+  //           pointer-events: none;
+  //           color: #cccccc;
+  //           outline: 2px solid #cccccc;
+  //         }
+  // }
 }
 
 @media (max-width: 540px) {
