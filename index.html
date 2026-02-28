@@ -76,7 +76,7 @@
       >
       <h3 class="section-name rotated" id="biography">Biography</h3>
       <section class="biography__text">
-        <hgroup class="biography__title">
+        <div class="biography__title">
           <h2 class="biography__person-name">Katya Mills</h2>
           <div class="biography__person-annotation">
             <p>Art Director</p>
@@ -87,7 +87,7 @@
               <li>Design</li>
             </ul>
           </div>
-        </hgroup>
+        </div>
         <hr>
         <blockquote class="biography__quote">
           <p>“The more I deal with<br> the work as something that is my own,<br> as something that<br> is personal, the more successful it is.”</p>
@@ -106,11 +106,14 @@
             <figcaption class="designer__annotation">
               <h4 class="designer__name">JESS WONDER</h4>
               <dl class="designer__from-and-skills">
-                <dt>From/</dt>
-                <dd>Be more flower</dd>
-                <br>
-                <dt>Skills/</dt>
-                <dd>Design Strategy / Marketing</dd>
+                <div>
+                  <dt>From/</dt>
+                  <dd>Be more flower</dd>
+                </div>
+                <div>
+                  <dt>Skills/</dt>
+                  <dd>Design Strategy / Marketing</dd>
+                </div>
               </dl>
             </figcaption>
           </figure>
@@ -121,11 +124,14 @@
             <figcaption class="designer__annotation">
               <h4 class="designer__name">KAMERON KLEIN</h4>
               <dl class="designer__from-and-skills">
-                <dt>From/</dt>
-                <dd>Be more flower</dd>
-                <br>
-                <dt>Skills/</dt>
-                <dd>Design Strategy / Marketing</dd>
+                <div>
+                  <dt>From/</dt>
+                  <dd>Be more flower</dd>
+                </div>
+                <div>
+                  <dt>Skills/</dt>
+                  <dd>Design Strategy / Marketing</dd>
+                </div>
               </dl>
             </figcaption>
           </figure>
@@ -136,11 +142,14 @@
             <figcaption class="designer__annotation">
               <h4 class="designer__name">LOUISSE RED</h4>
               <dl class="designer__from-and-skills">
-                <dt>From/</dt>
-                <dd>Be more flower</dd>
-                <br>
-                <dt>Skills/</dt>
-                <dd>Design Strategy / Marketing</dd>
+                <div>
+                  <dt>From/</dt>
+                  <dd>Be more flower</dd>
+                </div>
+                <div>
+                  <dt>Skills/</dt>
+                  <dd>Design Strategy / Marketing</dd>
+                </div>
               </dl>
             </figcaption>
           </figure>
@@ -151,11 +160,14 @@
             <figcaption class="designer__annotation">
               <h4 class="designer__name">KAMERON KLEIN</h4>
               <dl class="designer__from-and-skills">
-                <dt>From/</dt>
-                <dd>Be more flower</dd>
-                <br>
-                <dt>Skills/</dt>
-                <dd>Design Strategy / Marketing</dd>
+                <div>
+                  <dt>From/</dt>
+                  <dd>Be more flower</dd>
+                </div>
+                <div>
+                  <dt>Skills/</dt>
+                  <dd>Design Strategy / Marketing</dd>
+                </div>
               </dl>
             </figcaption>
           </figure>
@@ -226,30 +238,30 @@
     </address>
     <p class="footer__product-of">A product of <strong>MOD</strong></p>
     <small class="footer__copyright">© 2023 Mod Media. All rights reserved</small>
-  </footer>  
+  </footer>
+  <dialog class="feedback" id="feedback">
+    <form action="#" method="dialog">
+      <h2>Get in touch</h2>
+      <p>Do you have any questions? Have something to say? Don't be shy, write to us:</p>
+      <label class="input-name">
+        Name
+        <input autofocus required type="text" name="username" placeholder="3+ Characters">
+      </label>
+      <label class="input-email">
+        E-mail
+        <input required type="email" name="email" placeholder="name@email.com">
+      </label>
+      <label class="input-comments">
+        Comment
+        <textarea name="comment" placeholder="Some text..." rows="6"></textarea>
+      </label>
+      <div class="feedback__buttons">
+        <button type="reset"><span>Cancel</span></button>
+        <button type="submit"><span>+ Send</span></button>
+      </div>
+    </form>
+  </dialog>
 </body>
-<dialog class="feedback" id="feedback">
-  <form action="#" method="dialog">
-    <h2>Get in touch</h2>
-    <p>Do you have any questions? Have something to say? Don't be shy, write to us:</p>
-    <label class="input-name">
-      Name
-      <input autofocus required type="text" name="username" placeholder="3+ Characters">
-    </label>
-    <label class="input-email">
-      E-mail
-      <input required type="email" name="email" placeholder="name@email.com">
-    </label>
-    <label class="input-comments">
-      Comment
-      <textarea name="comment" placeholder="Some text..." rows="6"></textarea>
-    </label>
-    <div class="feedback__buttons">
-      <button type="reset">Cancel</button>
-      <button type="submit">+ Send</button>
-    </div>
-  </form>
-</dialog>
 </html>
 
 
