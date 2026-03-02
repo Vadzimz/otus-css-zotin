@@ -248,10 +248,10 @@ hr {
   gap: 24px;
   align-items: end;
 }
-.designer__annotation, .designer__image_smaller-size {
+.designer__annotation, .designer__image-smaller-size {
   width: 337px;
 }
-.designer__image_bigger-size {
+.designer__image-bigger-size {
   width: 572px;
 }
 .designer__from-and-skills dt, .designer__from-and-skills dd {
@@ -273,7 +273,7 @@ hr {
   justify-content: space-around;
   list-style-type: none;
 }
-.testimonials__image_main {
+.testimonials__image-main {
   grid-area: col-2;
   width: 100%;
 }
@@ -369,24 +369,24 @@ hr {
   .nav-list__link:hover {
     text-decoration: none;
   }
-  .nav-list__link_first-letter {
+  .nav-list__link-first-letter {
     font-family: "Bitter";
     font-weight: 400;
     font-size: 40px;
   }
-  .nav-list__link_first-letter:focus-visible {
+  .nav-list__link-first-letter:focus-visible {
     color: #a07c72;
     outline: 2px solid #e0b59f;
     outline-offset: 5px;
     border-radius: 5px;
   }
-  .nav-list__link_first-letter:hover {
+  .nav-list__link-first-letter:hover {
     color: #a07c72;
   }
-  .nav-list__link_first-letter:active {
+  .nav-list__link-first-letter:active {
     color: #e0b59f;
   }
-  .nav-list__link_but-first-letter {
+  .nav-list__link-but-first-letter {
     display: none;
   }
   .nav-list__button {
@@ -478,15 +478,15 @@ hr {
   #designers, #strong-points {
     padding: 0 0 32px 0;
   }
-  .designer__image_bigger-size, .designer__image_smaller-size {
+  .designer__image-bigger-size, .designer__image-smaller-size {
     width: 310px;
     height: 440px;
   }
-  .designer__image_bigger-size {
+  .designer__image-bigger-size {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .designer__image_smaller-size {
+  .designer__image-smaller-size {
     -o-object-fit: fill;
        object-fit: fill;
   }
@@ -497,7 +497,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
   }
-  .testimonials__image_main {
+  .testimonials__image-main {
     display: none;
   }
   .testimonials__info {
@@ -640,6 +640,7 @@ body:has(dialog[open]) {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  position: relative;
   height: inherit;
   padding: 0 20px;
   font-family: "Roboto", Arial, sans-serif;
@@ -676,6 +677,9 @@ body:has(dialog[open]) {
   border-radius: 10px;
   border: none;
   outline: 2px solid #b3b3b3;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   transition: background-color 0.5s ease;
 }
 .feedback form label input::-moz-placeholder, .feedback form label textarea::-moz-placeholder {
@@ -811,6 +815,26 @@ body:has(dialog[open]) {
 .feedback form:invalid button[type=submit] {
   pointer-events: none;
   background-color: #cccccc;
+}
+.feedback button[type=button] {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  align-items: center;
+  border: none;
+  outline: 2px solid #b3b3b3;
+  border-radius: 10px;
+  background-color: #fff;
+  top: 5px;
+  right: 5px;
+  transition: background-color 0.5s ease;
+}
+.feedback button[type=button]:hover {
+  background-color: lightgray;
+}
+.feedback button[type=button]:active {
+  background-color: beige;
 }
 
 @media (max-width: 540px) {

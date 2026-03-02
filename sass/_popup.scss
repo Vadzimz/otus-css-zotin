@@ -31,6 +31,7 @@ body:has(dialog[open]) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    position: relative;
     height: inherit;
     padding: 0 20px;
     
@@ -63,9 +64,10 @@ body:has(dialog[open]) {
         border-radius: 10px;
         border: none;
         outline: 2px solid #b3b3b3;
+        @include font-set;
         transition: background-color 0.5s ease;
         &::placeholder {
-          color: #868686
+          color: #868686;
         }
 
         &:focus-visible {
@@ -228,6 +230,31 @@ body:has(dialog[open]) {
             background-color: #cccccc; 
           }
   }
+
+  button[type="button"] {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    align-items: center;
+    border: none;
+    outline: 2px solid #b3b3b3;
+    border-radius: 10px;
+    background-color: #fff;
+    top: 5px;
+    right: 5px;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background-color: lightgray;
+    }
+
+    &:active {
+      background-color: beige;
+    }
+  }
+
+
 }
 
 @media (max-width: 540px) {

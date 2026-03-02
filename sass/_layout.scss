@@ -204,11 +204,11 @@ hr {
   gap: 24px;
   align-items: end;
 
-  &__annotation, &__image_smaller-size {
+  &__annotation, &__image-smaller-size {
     width: 337px;
   }
 
-  &__image_bigger-size {
+  &__image-bigger-size {
     width: 572px;
   }
 
@@ -236,7 +236,7 @@ hr {
     list-style-type: none;
   }
 
-  &__image_main {
+  &__image-main {
     grid-area: col-2;
     width: 100%;
   }
@@ -366,7 +366,7 @@ hr {
           text-decoration: none;
         }
 
-        &_first-letter {
+        &-first-letter {
           font-family: "Bitter";
           font-weight: 400;
           font-size: 40px;
@@ -380,7 +380,7 @@ hr {
           &:active { color: #e0b59f }
         }
 
-        &_but-first-letter {
+        &-but-first-letter {
           display: none;
         }
         
@@ -499,16 +499,16 @@ hr {
 
   .designer {
     &__image {
-      &_bigger-size, &_smaller-size {
+      &-bigger-size, &-smaller-size {
         width: 310px;
         height: 440px;
       }
 
-      &_bigger-size {
+      &-bigger-size {
         object-fit: cover;
       }
 
-      &_smaller-size {
+      &-smaller-size {
         object-fit: fill;
       }
     }
@@ -522,7 +522,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
 
-    &__image_main {
+    &__image-main {
       display: none;  
     }
 
